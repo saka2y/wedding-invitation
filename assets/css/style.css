@@ -648,7 +648,6 @@ li {
   border-radius: 999px;
   font-size: 15px;
   font-weight: bold;
-  background: url("/assets/img/common/ico_arrow_right.svg") no-repeat center right 12px/12px;
   width: 100%;
   background-size: 20px;
 }
@@ -818,7 +817,6 @@ li {
   content: "";
   width: 20px;
   height: 20px;
-  background: url(/assets/img/common/ico_arrow_right.svg) no-repeat 0 0/100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -857,7 +855,6 @@ li {
   content: "";
   width: 440px;
   height: 440px;
-  background: url(/assets/img/top/acc_bg_01.svg) no-repeat 0 0/100%;
   position: absolute;
   top: 376px;
   left: -318px;
@@ -976,7 +973,6 @@ li {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: url("/assets/img/common/ico_arrow_right.svg") no-repeat center right 13px/20px 20px;
   border-radius: 24px;
   font-weight: bold;
 }
@@ -4341,3 +4337,4 @@ li {
       font-size: 1rem;
     }
   }
+}

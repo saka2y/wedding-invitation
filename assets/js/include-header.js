@@ -11,10 +11,9 @@ let html_h = `
 <header class="l-header">
 
   <ul class="l-headerNaviList">
-    <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">messege</a></li>
-    <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">Host</a></li>
-    <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">infomation</a></li>
-    <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">Venue Access</a></li>
+    <li class="l-headerNaviList__item"><a href="#" class="l-headerNaviList__itemLink">Host</a></li>
+    <li class="l-headerNaviList__item"><a href="#" class="l-headerNaviList__itemLink">infomation</a></li>
+    <li class="l-headerNaviList__item"><a href="#" class="l-headerNaviList__itemLink">Venue Access</a></li>
     <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">Dress code</a></li>
     <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">ご祝儀について</a></li>
     <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">RSVP</a></li>

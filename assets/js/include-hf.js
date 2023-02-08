@@ -20,37 +20,37 @@ let html_h = `
   <div class="l-headerSpMenu">
     <ul class="l-headerSpMenuList">
       <li class="l-headerSpMenuList__item">
-        <a href="/" class="l-headerSpMenuList__itemLink">
+        <a href="#messege" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_messege.png" alt="メッセージ">
         </a>
       </li>
       <li class="l-headerSpMenuList__item">
-        <a href="/about/" class="l-headerSpMenuList__itemLink">
+        <a href="#Host" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_host.png" alt="プロフィール">
         </a>
       </li>
       <li class="l-headerSpMenuList__item">
-        <a href="/open-account/" class="l-headerSpMenuList__itemLink">
+        <a href="#infomation" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_infomation.png" alt="日時">
         </a>
       </li>
       <li class="l-headerSpMenuList__item">
-        <a href="../service/" class="l-headerSpMenuList__itemLink">
+        <a href="#VenueAccess" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_venueaccess.png" alt="アクセス">
         </a>
       </li>
       <li class="l-headerSpMenuList__item">
-        <a href="../point/" class="l-headerSpMenuList__itemLink">
+        <a href="#Dresscode" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_dresscode.png" alt="ドレスコード">
         </a>
       </li>
       <li class="l-headerSpMenuList__item">
-        <a href="../fees/" class="l-headerSpMenuList__itemLink">
+        <a href="#gift" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_giftmoney.png" alt="ご祝儀について">
         </a>
       </li>
       <li class="l-headerSpMenuList__item">
-        <a href="../campaign/" class="l-headerSpMenuList__itemLink">
+        <a href="#rsvp" class="l-headerSpMenuList__itemLink">
           <img class="l-headerSpMenuList__itemLinkImg" src="/assets/img/top/menu_rsvp.png" alt="出席確認">
         </a>
       </li>
@@ -59,13 +59,13 @@ let html_h = `
   <div class="l-header__bottom">
     <div class="l-inner">
       <ul class="l-headerNaviList">
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">messege</a></li>
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">Host</a></li>
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">infomation</a></li>
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">Venue Access</a></li>
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">Dress code</a></li>
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">ご祝儀について</a></li>
-      <li class="l-headerNaviList__item"><a href="" class="l-headerNaviList__itemLink">RSVP</a></li>
+      <li class="l-headerNaviList__item"><a href="#messege" class="l-headerNaviList__itemLink">messege</a></li>
+      <li class="l-headerNaviList__item"><a href="#Host" class="l-headerNaviList__itemLink">Host</a></li>
+      <li class="l-headerNaviList__item"><a href="#infomation" class="l-headerNaviList__itemLink">infomation</a></li>
+      <li class="l-headerNaviList__item"><a href="#VenueAccess" class="l-headerNaviList__itemLink">Venue Access</a></li>
+      <li class="l-headerNaviList__item"><a href="#Dresscode" class="l-headerNaviList__itemLink">Dress code</a></li>
+      <li class="l-headerNaviList__item"><a href="#gift" class="l-headerNaviList__itemLink">ご祝儀について</a></li>
+      <li class="l-headerNaviList__item"><a href="#rsvp" class="l-headerNaviList__itemLink">RSVP</a></li>
       </ul>
     </div>
   </div>
@@ -96,12 +96,10 @@ let html_f = `
 // ルート書き換え
 html_h = html_h.split('src="/').join(`src="${DOMAIN}/`);
 html_h = html_h.split('href="/').join(`href="${DOMAIN}/`);
-html_h = html_h.split('href="#').join(`href="${DOMAIN}/#"`);
 html_h = html_h.split('href=""').join(`href="${DOMAIN}/"`);
 
 html_f = html_f.split('src="/').join(`src="${DOMAIN}/`);
 html_f = html_f.split('href="/').join(`href="${DOMAIN}/`);
-html_f = html_f.split('href="#').join(`href="${DOMAIN}/#"`);
 html_f = html_f.split('href=""').join(`href="${DOMAIN}/"`);
 
 // 出力
@@ -114,9 +112,16 @@ el_f.insertAdjacentHTML('beforeend', html_f);
 // SPメニュー
 const spBtnCollection = document.getElementsByClassName('l-headerSp__btn');
 const spMenuCollection = document.getElementsByClassName('l-headerSpMenu');
+const spMenuListItemCollection = document.getElementsByClassName('l-headerSpMenuList__item');
 const body = document.body;
 
 spBtnCollection[0].addEventListener('click', function () {
+  this.classList.toggle('active');
+  spMenuCollection[0].classList.toggle('active');
+  body.classList.toggle('active');
+});
+
+spMenuListItemCollection[0].addEventListener('click', function () {
   this.classList.toggle('active');
   spMenuCollection[0].classList.toggle('active');
   body.classList.toggle('active');
