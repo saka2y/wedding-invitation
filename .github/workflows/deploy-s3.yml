@@ -1,0 +1,20 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy-s3:
+    name: deploy s3
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-1
+      - name: s3 sync
+        working-directory: ./
+        run: aws s3 sync . s3://wedding-invitation-saka2 --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --include "index.html,asserts"
