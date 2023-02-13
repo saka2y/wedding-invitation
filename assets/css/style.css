@@ -66,6 +66,18 @@ a:hover {
   }
 }
 
+/* PCの時だけ改行させるクラス */
+.br-pc {
+  display: none;
+}
+
+@media(min-width: 768px) {
+  .br-pc {
+    display: block;
+  }
+}
+
+
 label {
   display: inline-block;
 }
@@ -170,7 +182,7 @@ body.active {
 
 .l-header .l-headerSp__btn {
   width: 54px;
-  height: 52px;
+  height: 51px;
   background-color: #fff;
   position: relative;
 }
@@ -2812,7 +2824,7 @@ li {
 
 /* スライド設定 */
 .css-carousel-slider .slide-wrap {
-  width: 400%; /* 画像の合計数*100%を設定(*2) */
+  width: 200%; /* 画像の合計数*100%を設定(*2) */
   position: absolute;
   display: flex;
   top: 0;
@@ -2822,7 +2834,7 @@ li {
   animation-delay: 2s; /* スライダーが始まるまでの時間(*4) */
 }
 .css-carousel-slider .slide-wrap-main {
-  width: 100%;
+  width: 50%;
   z-index: 1;
   animation: css-carousel-slider-main 20s infinite; /* (*3)と同じ内容を設定 */
   animation-delay: 2s; /* (*4)と同じ内容を設定 */
@@ -2835,17 +2847,17 @@ li {
 @keyframes css-carousel-slider {
   0% { transform: translateX(0); }
 
-  20% { transform: translateX(calc(1 / 4 * -100%)); }
-  25% { transform: translateX(calc(1 / 4 * -100%)); }
+  20% { transform: translateX(calc(1 / 4 * -50%)); }
+  25% { transform: translateX(calc(1 / 4 * -50%)); }
 
-  45% { transform: translateX(calc(2 / 4 * -100%)); }
-  50% { transform: translateX(calc(2 / 4 * -100%)); }
+  45% { transform: translateX(calc(2 / 4 * -50%)); }
+  50% { transform: translateX(calc(2 / 4 * -50%)); }
 
-  70% { transform: translateX(calc(3 / 4 * -100%)); }
-  75% { transform: translateX(calc(3 / 4 * -100%)); }
+  70% { transform: translateX(calc(3 / 4 * -50%)); }
+  75% { transform: translateX(calc(3 / 4 * -50%)); }
 
-  95% { transform: translateX(calc(4 / 4 * -100%)); }
-  100% { transform: translateX(calc(4 / 4 * -100%)); }
+  95% { transform: translateX(calc(4 / 4 * -50%)); }
+  100% { transform: translateX(calc(4 / 4 * -50%)); }
 }
 @keyframes css-carousel-slider-main {
   0% { transform: translateX(100%); }
@@ -3159,7 +3171,6 @@ li {
   }
 
   .col2host .col-text .accesstext{
-    font-size: 11px;
     font-weight: lighter;
     line-height: 13px;
     margin-bottom: 30px;
