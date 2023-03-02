@@ -88,7 +88,8 @@ let html_f = `
   </div>
 
   <div class="l-copyRight">
-    <small class="l-Copyright__text">thank you for always supporting us  ...</small>
+    <small class="l-Copyright__text">thank you for always supporting us  ...<br>
+    <a target="_blank"style="color: #fff; href="https://icons8.com/icon/80355/%E3%82%B9%E3%82%BF%E3%83%BC">スター</a> icon by <a target="_blank" style="color: #fff; href="https://icons8.com">Icons8</a></small>
   </div>
 </footer>
 `
