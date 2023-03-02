@@ -613,7 +613,7 @@ body {
   }
 }
 @media (min-width: 1100px){
-  .l-header .l-headerSp__btn{
+  .l-header .l-headerSp__btn .l-header__inner{
     display: none;
   }
   .l-headerSpMenu{
