@@ -2752,6 +2752,7 @@ li {
   }
 
   .col2host .col-text .messege {
+    font-weight: lighter;
     margin: 20px 0 0 0;
     font-size: 12px;
   }
@@ -3166,6 +3167,7 @@ li {
   }
 
   .col2host .col-text .messege {
+    font-weight: lighter;
     margin: 20px 0 0 0;
     font-size: 12px;
   }
