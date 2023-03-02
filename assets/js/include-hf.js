@@ -113,7 +113,7 @@ el_f.insertAdjacentHTML('beforeend', html_f);
 // SPメニュー
 const spBtnCollection = document.getElementsByClassName('l-headerSp__btn');
 const spMenuCollection = document.getElementsByClassName('l-headerSpMenu');
-const spMenuListItemCollection = document.getElementsByClassName('l-headerSpMenuList__item');
+const spMenuListItemCollection = document.getElementsByClassName('l-headerSpMenuList__itemLink');
 const body = document.body;
 
 spBtnCollection[0].addEventListener('click', function () {
@@ -127,6 +127,10 @@ spMenuListItemCollection[0].addEventListener('click', function () {
   spMenuCollection[0].classList.toggle('active');
   body.classList.toggle('active');
 });
+
+$('.l-headerSpMenuList__item a').on('click',function() {
+  $('.l-headerSpMenu').removeClass('active');
+} );
 
 // pagetop
 const pagetopCollection = document.getElementsByClassName('pagetop');
