@@ -180,57 +180,7 @@ body.active {
   width: 103px;
 }
 
-.l-header .l-headerSp__btn {
-  width: 54px;
-  height: 51px;
-  background-color: #fff;
-  position: relative;
-}
 
-.l-header .l-headerSp__btn .bar {
-  width: 29px;
-  height: 3px;
-  border-radius: 250px;
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #707070;
-  transition: all 0.2s;
-}
-
-.l-header .l-headerSp__btn .bar-top {
-  top: 14px;
-}
-
-.l-header .l-headerSp__btn .bar-middle {
-  width: 21px;
-  top: 50%;
-  left: 43%;
-  transform: translate(-50%, -50%);
-}
-
-.l-header .l-headerSp__btn .bar-bottom {
-  bottom: 14px;
-}
-
-.l-header .l-headerSp__btn.active .bar-top {
-  transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 50%;
-  left: 25%;
-}
-
-.l-header .l-headerSp__btn.active .bar-middle {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-}
-
-.l-header .l-headerSp__btn.active .bar-bottom {
-  transform: rotate(45deg);
-  top: 50%;
-  left: 25%;
-}
 
 .l-headerSpMenu {
   height: 100vh;
@@ -4207,7 +4157,59 @@ li {
       display: none;
     }
   }
-
+  @media screen and (max-width: 1100px) {
+    .l-header .l-headerSp__btn {
+      width: 54px;
+      height: 51px;
+      background-color: #fff;
+      position: relative;
+    }
+    
+    .l-header .l-headerSp__btn .bar {
+      width: 29px;
+      height: 3px;
+      border-radius: 250px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #707070;
+      transition: all 0.2s;
+    }
+    
+    .l-header .l-headerSp__btn .bar-top {
+      top: 14px;
+    }
+    
+    .l-header .l-headerSp__btn .bar-middle {
+      width: 21px;
+      top: 50%;
+      left: 43%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .l-header .l-headerSp__btn .bar-bottom {
+      bottom: 14px;
+    }
+    
+    .l-header .l-headerSp__btn.active .bar-top {
+      transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 50%;
+      left: 25%;
+    }
+    
+    .l-header .l-headerSp__btn.active .bar-middle {
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    
+    .l-header .l-headerSp__btn.active .bar-bottom {
+      transform: rotate(45deg);
+      top: 50%;
+      left: 25%;
+    }
+  }
   @media (min-width: 1100px) {
     .l-header .l-headerSp__btn {
       display: none;
