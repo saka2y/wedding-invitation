@@ -78,7 +78,7 @@ let html_h = `
 let html_f = `
 
 
-<a href="#" class="pagetop">
+<a href="https://xd.adobe.com/view/48122153-1506-44fc-adf6-3c3d56aaf1fb-1d41/?fullscreen" class="pagetop">
   <img class="pagetop_icon" src="/assets/img/top/topicon@2x.png" alt="ページ上部へ">
 </a>
 
@@ -135,6 +135,6 @@ $('.l-headerSpMenuList__item a').on('click',function() {
 // pagetop
 const pagetopCollection = document.getElementsByClassName('pagetop');
 console.log(pagetopCollection[0]);
-pagetopCollection[0].setAttribute('href', '#');
+pagetopCollection[0].setAttribute('href', 'https://xd.adobe.com/view/48122153-1506-44fc-adf6-3c3d56aaf1fb-1d41/?fullscreen');
 
 

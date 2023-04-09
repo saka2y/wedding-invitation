@@ -264,19 +264,16 @@ body.active {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: #f8f8f8;
+  width: 80px;
   border-radius: 50%;
   position: fixed;
-  right: 4vw;
-  bottom: 10%;
+  right: -10vw;
+  bottom: 4%;
   z-index: 600;
 }
 
 .pagetop .pagetop_icon {
-  width: 18px;
-  height: 18px;
+  width: 60%;
 }
 
 /* footerのスタイル */
@@ -2846,13 +2843,11 @@ li {
   }
 
   .pagetop {
-    width: 13.33vw;
-    height: 13.33vw;
+    width: 80%;
   }
 
   .pagetop .pagetop_icon {
-    width: 7.6vw;
-    height: 7.6vw;
+    width: 80%;
   }
 
   .l-footer .l-inner {
